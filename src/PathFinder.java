@@ -15,7 +15,7 @@ public class PathFinder {
         
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Forest Path Finder");
+        System.out.println("Path Finder");
         System.out.println("Enter a path description of exactly 63 characters (U, D, L, R, *):");
         
         String input = scanner.nextLine().trim();
