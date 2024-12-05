@@ -11,7 +11,7 @@ public class PathFinder {
 
     public static void main(String[] args) {
         // Increase heap size to handle complex computations
-        // Recommended to run with: java -Xmx4g -XX:+UseParallelGC -XX:+UseParallelOldGC 'ForestPathFinder'
+        // Recommended to run with: java -Xmx4g -XX:+UseParallelGC -XX:+UseParallelOldGC 'PathFinder'
         
         Scanner scanner = new Scanner(System.in);
         
