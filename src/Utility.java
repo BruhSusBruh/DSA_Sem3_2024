@@ -1,16 +1,17 @@
+
 import java.util.Scanner;
 
 public class Utility {
 
     public static String getInputFromUser() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a 63-character path (only D, U, L, R, *):");
+        System.out.println("Enter a 35-character path (only D, U, L, R, *):");
         return scanner.nextLine();
     }
 
-    public static boolean validateInput(String path, int expectedLength) {
-        if (path.length() != expectedLength) {
-            displayErrorMessage("Error: Input must be " + expectedLength + " characters long.");
+    public static boolean validateInput(String path) {
+        if (path.length() != 35 && path.length() != 63) {
+            displayErrorMessage("Error: Input must be 35 characters long.");
             return false;
         }
         for (char c : path.toCharArray()) {
@@ -26,10 +27,10 @@ public class Utility {
         String input;
         do {
             input = getInputFromUser();
-            if (!validateInput(input, 63)) {
+            if (!validateInput(input)) {
                 System.out.println("Please try again.");
             }
-        } while (!validateInput(input, 63));
+        } while (!validateInput(input));
         return input;
     }
 
